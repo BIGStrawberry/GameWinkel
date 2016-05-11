@@ -1,0 +1,998 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Youplay - game HTML5 template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="documentation for game template">
+    <meta name="author" content="nK">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link href="assets/bootstrap.css" rel="stylesheet">
+    <link href="assets/jquery-ui.css" rel="stylesheet">
+    <link href="assets/jquery.tocify.css" rel="stylesheet">
+    <link href="assets/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="assets/custom.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div id="toc">
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <a href="http://html.nkdev.info/youplay" target="_blank"><img src="assets/images/logo.png" alt="youplay"></a>
+            
+            <br />
+            <h2>Documentation</h2>
+            <br />
+            <p>Game HTML5 Template based on Bootstrap 3.</p>
+            <p>
+              <a class="btn btn-default" href="../">Preview</a>
+              <a class="btn btn-success" href="http://themeforest.net/user/nKdev?ref=nKdev" target="_blank">Profile</a>
+              <a class="btn btn-warning" href="http://nk.ticksy.com" target="_blank">Support</a>
+            </p>
+          </div>
+              
+              <div class="well">
+                <h2>Overview</h2>
+                <strong>Youplay</strong> is HTML5 template based on bootstrap 3.
+              </div>
+
+
+              <div class="well">
+                <h2>Template Structure</h2>
+                All template files have fixed structure consisting of <code>navbar</code>, <code>banner</code>, <code>search bar</code>, <code>content</code>, <code>social block</code> and <code>footer</code> as shown below:
+                <br><br>
+                <img src="assets/images/structure.png" alt="">
+
+                <h3>Beginning of Page</h3>
+                Below code is used at the beginning of all HTML pages to detect Internet Explorer browser version and set a spesific class applied to Internet Explorer versions.
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html>
+&lt;!--[if lt IE 7]>  &lt;html class="lt-ie7"> &lt;![endif]-->
+&lt;!--[if IE 7]>     &lt;html class="lt-ie8"> &lt;![endif]-->
+&lt;!--[if IE 8]>     &lt;html class="lt-ie9"> &lt;![endif]-->
+&lt;!--[if gt IE 8]>&lt;!--> &lt;html> &lt;!--&lt;![endif]--></pre>
+
+                <h3>Page Head</h3>
+                Page head contains metadata, javascript and css files. This is blank example without plugins.:
+<pre class="prettyprint linenums">
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+  &lt;title>youplay&lt;/title>
+
+  &lt;meta name="description" content="">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+  &lt;!-- Icon -->
+  &lt;link rel="icon" type="image/png" href="../assets/youplay/images/icon.png">
+
+  &lt;!-- Google Fonts -->
+  &lt;link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+
+  &lt;!-- Bootstrap -->
+  &lt;link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+  &lt;!-- FontAwesome -->
+  &lt;link rel="stylesheet" type="text/css" href="../assets/plugins/fontawesome/css/font-awesome.min.css" />
+
+  &lt;link rel="stylesheet" type="text/css" href="../assets/youplay/css/youplay.min.css" />
+  &lt;!--[if lt IE 9]>
+      &lt;script src="../assets/plugins/html5shiv/html5shiv.min.js">&lt;/script>
+    &lt;![endif]-->
+&lt;/head></pre>
+
+                <h3>Top Navbar</h3>
+                Top navbar have bootstrap navbar structure with some modifications (submenus):
+<pre class="prettyprint linenums">
+&lt;!-- Navbar -->
+&lt;nav class="navbar-youplay navbar navbar-default navbar-fixed-top ">
+  &lt;div class="container">
+    &lt;div class="navbar-header">
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        &lt;span class="sr-only">Toggle navigation&lt;/span>
+        &lt;span class="icon-bar">&lt;/span>
+        &lt;span class="icon-bar">&lt;/span>
+        &lt;span class="icon-bar">&lt;/span>
+      &lt;/button>
+      &lt;a class="navbar-brand" href="index.html">
+        &lt;img src="assets/images/logo.png" alt="">
+      &lt;/a>
+    &lt;/div>
+    &lt;div id="navbar" class="navbar-collapse collapse">
+      &lt;ul class="nav navbar-nav">
+        &lt;li>&lt;a href="index.html">
+
+                  Home &lt;span class="label">youplay&lt;/span>
+
+              &lt;/a>
+        &lt;/li>
+        &lt;li class="dropdown dropdown-hover ">
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false">
+
+                    Store &lt;span class="caret">&lt;/span> &lt;span class="label">games&lt;/span>
+
+                  &lt;/a>
+          &lt;div class="dropdown-menu" style="width: 320px;">
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="store-1.html">Store Style 1&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="store-2.html">Store Style 2&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="cart.html">Cart&lt;/a>
+              &lt;/li>
+            &lt;/ul>
+            &lt;!--
+                      -->
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="store-product-1.html">Product Style 1&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="store-product-2.html">Product Style 2&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="checkout.html">Checkout&lt;/a>
+              &lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/li>
+        &lt;li class="dropdown dropdown-hover ">
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false">
+
+                    Blog &lt;span class="caret">&lt;/span> &lt;span class="label">news&lt;/span>
+
+                  &lt;/a>
+          &lt;div class="dropdown-menu" style="width: 320px;">
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="blog-1.html">Blog Style 1&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="blog-2.html">Blog Style 2&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="blog-3.html">Blog Style 3&lt;/a>
+              &lt;/li>
+            &lt;/ul>
+            &lt;!--
+                      -->
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="blog-post-1.html">Blog Post 1&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="blog-post-2.html">Blog Post 2&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="blog-post-3.html">Blog Post 3&lt;/a>
+              &lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/li>
+        &lt;li class="dropdown dropdown-hover active">
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false">
+
+                    Pages &lt;span class="caret">&lt;/span> &lt;span class="label">full list&lt;/span>
+
+                  &lt;/a>
+          &lt;div class="dropdown-menu">
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="user-profile.html">User Profile&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="search.html">Search&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="coming-soon.html">Coming Soon&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="login.html">Login&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="404.html">404&lt;/a>
+              &lt;/li>
+              &lt;li class="active">&lt;a href="blank.html">Blank&lt;/a>
+              &lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/li>
+      &lt;/ul>
+      &lt;ul class="nav navbar-nav navbar-right">
+        &lt;li class="dropdown dropdown-hover ">
+          &lt;a href="#!" class="dropdown-toggle" role="button" aria-expanded="false">
+
+                    John Doe &lt;span class="badge bg-default">2&lt;/span> &lt;span class="caret">&lt;/span> &lt;span class="label">it is you&lt;/span>
+
+                  &lt;/a>
+          &lt;div class="dropdown-menu">
+            &lt;ul role="menu">
+              &lt;li>&lt;a href="user-profile.html">Profile&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="#!">Settings&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="#!">Messages &lt;span class="badge pull-right bg-warning">13&lt;/span>&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="#!">Recomendations&lt;/a>
+              &lt;/li>
+              &lt;li>&lt;a href="cart.html">My Cart &lt;span class="badge pull-right bg-default">3&lt;/span>&lt;/a>
+              &lt;/li>
+              &lt;li class="divider">&lt;/li>
+              &lt;li>&lt;a href="login.html">Log Out&lt;/a>
+              &lt;/li>
+              &lt;li class="dropdown-submenu pull-left">
+                &lt;a href="#!">More..&lt;/a>
+                &lt;div class="dropdown-menu">
+                  &lt;ul role="menu">
+                    &lt;li>&lt;a href="#!">3rd level&lt;/a>
+                    &lt;/li>
+                    &lt;li>&lt;a href="#!">3rd level&lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/li>
+            &lt;/ul>
+          &lt;/div>
+        &lt;/li>
+        &lt;li>
+          &lt;a class="search-toggle" href="search.html">
+            &lt;i class="fa fa-search">&lt;/i>
+          &lt;/a>
+        &lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+&lt;/nav>
+&lt;!-- /Navbar --></pre>
+
+
+                <h3>Content</h3>
+                Content consists of page banner, page's main body and social block with footer. HTML code of Content container as shown below:
+
+<pre class="prettyprint linenums">
+&lt;!-- Main Content -->
+&lt;section class="content-wrap">
+
+  &lt;!-- Banner -->
+  &lt;div class="youplay-banner banner-top small">
+    ...
+  &lt;/div>
+  &lt;!-- /Banner -->
+
+
+  &lt;div class="container youplay-content">
+    ...
+  &lt;/div>
+
+  &lt;!-- Footer -->
+  &lt;footer>
+    &lt;div class="wrapper">
+
+      &lt;!-- Social Buttons -->
+      &lt;div class="social">
+        ...
+      &lt;/div>
+      &lt;!-- /Social Buttons -->
+
+      &lt;!-- Copyright -->
+      &lt;div class="copyright">
+        ...
+      &lt;/div>
+      &lt;!-- /Copyright -->
+
+    &lt;/div>
+  &lt;/footer>
+  &lt;!-- /Footer -->
+
+&lt;/section>
+&lt;!-- /Main Content --></pre>
+
+                <h3>Banner</h3>
+                Banner code below:
+<pre class="prettyprint linenums">
+&lt;!-- Banner -->
+&lt;div class="youplay-banner banner-top small">
+  &lt;div class="image" style="background-image: url(assets/images/banner-blog-bg.jpg)" data-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;">
+  &lt;/div>
+
+  &lt;div class="info" data-top="opacity: 1; transform: translate3d(0px,0px,0px);" data-top-bottom="opacity: 0; transform: translate3d(0px,150px,0px);" data-anchor-target=".youplay-banner.banner-top">
+    &lt;div>
+      &lt;div class="container">
+        &lt;h2>Blank Page&lt;/h2>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;!-- /Banner --></pre>
+
+                <h3>Footer</h3>
+                Footer contains Social block and Copyright section. See code below:
+<pre class="prettyprint linenums">
+&lt;!-- Footer -->
+&lt;footer>
+  &lt;div class="wrapper" style="background-image: url(assets/images/footer-bg.jpg)" data-bottom="transform:translate3d(0px,0px,0px);" data-bottom-top="transform:translate3d(0px,-200px,0px);" data-anchor-target="footer">
+
+    &lt;!-- Social Buttons -->
+    &lt;div class="social">
+      &lt;div class="container" data-bottom-top="opacity: 0;" data-bottom="opacity: 1;">
+        &lt;h3>Connect socially with &lt;strong>youplay&lt;/strong>&lt;/h3>
+
+        &lt;div class="row icons">
+          &lt;div class="col-xs-6 col-sm-3">
+            &lt;a href="#!">
+              &lt;i class="fa fa-facebook-square">&lt;/i>
+              &lt;span>Like on Facebook&lt;/span>
+            &lt;/a>
+          &lt;/div>
+          &lt;div class="col-xs-6 col-sm-3">
+            &lt;a href="#!">
+              &lt;i class="fa fa-twitter-square">&lt;/i>
+              &lt;span>Follow on Twitter&lt;/span>
+            &lt;/a>
+          &lt;/div>
+          &lt;div class="col-xs-6 col-sm-3">
+            &lt;a href="#!">
+              &lt;i class="fa fa-google-plus-square">&lt;/i>
+              &lt;span>Follow on Google+&lt;/span>
+            &lt;/a>
+          &lt;/div>
+          &lt;div class="col-xs-6 col-sm-3">
+            &lt;a href="#!">
+              &lt;i class="fa fa-youtube-square">&lt;/i>
+              &lt;span>Watch on Youtube&lt;/span>
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>
+
+      &lt;/div>
+    &lt;/div>
+    &lt;!-- /Social Buttons -->
+
+    &lt;!-- Copyright -->
+    &lt;div class="copyright">
+      &lt;div class="container">
+        &lt;strong>nK&lt;/strong> &copy; 2015. All rights reserved
+      &lt;/div>
+    &lt;/div>
+    &lt;!-- /Copyright -->
+
+  &lt;/div>
+&lt;/footer>
+&lt;!-- /Footer --></pre>
+
+
+                <h3>Search Block</h3>
+                Search Block contains big search input. HTML code as shown below:
+                <br>
+                <img src="assets/images/search.png" alt="Search Block">
+<pre class="prettyprint linenums">
+&lt;!-- Search Block -->
+&lt;div class="search-block">
+  &lt;a href="#!" class="search-toggle glyphicon glyphicon-remove">&lt;/a>
+  &lt;form action="search.html">
+    &lt;div class="youplay-input">
+      &lt;input type="text" name="search" placeholder="Search...">
+    &lt;/div>
+  &lt;/form>
+&lt;/div>
+&lt;!-- /Search Block --></pre>
+
+
+                <h3>Page End</h3>
+                End of page contains JavaScript codes. This is blank example without plugins.
+<pre class="prettyprint linenums">
+&lt;!-- jQuery -->
+&lt;script type="text/javascript" src="../assets/plugins/jquery/jquery.min.js">&lt;/script>
+
+&lt;!-- Bootstrap -->
+&lt;script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js">&lt;/script>
+
+&lt;!-- Skrollr -->
+&lt;script type="text/javascript" src="../assets/plugins/skrollr/skrollr.min.js">&lt;/script>
+
+&lt;!-- youplay -->
+&lt;script type="text/javascript" src="../assets/youplay/js/youplay.min.js">&lt;/script>
+
+&lt;!-- init youplay -->
+&lt;script>
+  youplay.init();
+&lt;/script></pre>
+
+              </div>
+
+              <div class="well">
+                <h2>Fonts</h2>
+                <strong>Youplay</strong> uses Play font from Google fonts. Loaded in header.
+<pre class="prettyprint linenums">
+&lt;link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+</pre>
+              </div>
+
+              <div class="well">
+                <h2>Themes</h2>
+                <strong>Youplay</strong> comes with 2 color themes: <code>Dark</code> and <code>Light</code>
+
+                <p>
+                To setup a selected theme use template from one of foldes: 
+                <code>dark/</code> or <code>light/</code>
+                </p>
+              </div>
+
+
+              <div class="well">
+                <h2>New Page</h2>
+                To create a new page, you can use <a href="../dark/blank.html">dark/blank.html</a> or <a href="../light/blank.html">light/blank.html</a> which provides basic page layout with <em>ALL plugins</em>.
+              </div>
+
+
+              <div class="well">
+                <h2>SASS</h2>
+                <p>
+                  <strong>Youplay</strong> uses SASS for development. You can change predefined colors in files: <code>scss/_variables.scss</code> or for light version <code>scss/_variables-light.scss</code>.
+                </p>
+                Main file for compile SCSS:
+                <ul>
+                  <li>Dark: <code>scss/youplay.scss</code></li>
+                  <li>Light: <code>scss/youplay-light.scss</code></li>
+                </ul>
+                All references see in folder <code>scss/parts/</code>
+              </div>
+
+
+              <div class="well">
+                <h2>Plugins Usage</h2>
+                Choose plugin:
+                <div class="youplay-select">
+                  <select name="plugins">
+                      <option value="fontawesome">Font Awesome</option>
+                      <option value="owlcarousel">Owl Carousel 2</option>
+                      <option value="countdown">jQuery Countdown</option>
+                      <option value="magnific">Magnific Popup</option>
+                      <option value="revslider">Slider Revolution</option>
+                      <option value="isotope">Isotope</option>
+                      <option value="skrollr">Skrollr</option>
+                  </select>
+                </div>
+
+                <div class="plugins-description">
+                  <!-- FontAwesome -->
+                  <div data-plugin="fontawesome" class="active">
+                    <h4>FontAwesome</h4>
+                    Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.
+                    <br><br>
+                    Plugin Page: <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+&lt;link rel="stylesheet" type="text/css" href="../assets/plugins/fontawesome/css/font-awesome.min.css" /></pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+No JavaScript</pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;i class="fa fa-html5">&lt;/i></pre>
+                  </div>
+                  <!-- /FontAwesome -->
+
+                  <!-- Owl Carousel 2 -->
+                  <div data-plugin="owlcarousel">
+                    <h4>Owl Carousel 2</h4>
+                    Touch enabled jQuery plugin that lets you create a beautiful responsive carousel slider.
+                    <br><br>
+                    Plugin Page: <a href="http://www.owlcarousel.owlgraphic.com/">http://www.owlcarousel.owlgraphic.com/</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+&lt;link rel="stylesheet" type="text/css" href="../assets/plugins/owl.carousel/owl.carousel.css" /></pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/owl.carousel/owl.carousel.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;div class="youplay-carousel">
+  &lt;a class="angled-img" href="store-product-1.html">
+    &lt;div class="img">
+      &lt;img src="assets/images/game-bloodborne-500x375.jpg" alt="">
+    &lt;/div>
+    &lt;div class="over-info">
+      &lt;div>
+        &lt;div>
+          &lt;h4>Bloodborne&lt;/h4>
+          &lt;div class="rating">
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/a>
+  &lt;a class="angled-img" href="#!">
+    &lt;div class="img">
+      &lt;img src="assets/images/game-dark-souls-ii-500x375.jpg" alt="">
+    &lt;/div>
+    &lt;div class="over-info">
+      &lt;div>
+        &lt;div>
+          &lt;h4>Dark Souls II&lt;/h4>
+          &lt;div class="rating">
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star">&lt;/i>
+            &lt;i class="fa fa-star-half-o">&lt;/i>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/a>
+&lt;/div></pre>
+                  </div>
+                  <!-- /Owl Carousel 2 -->
+
+                  <!-- jQuery Countdown -->
+                  <div data-plugin="countdown">
+                    <h4>jQuery Countdown</h4>
+                    A simple and html agnostic date countdown plugin for jQuery
+                    <br><br>
+                    Plugin Page: <a href="http://hilios.github.io/jQuery.countdown/">http://hilios.github.io/jQuery.countdown/</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+No CSS</pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/jquery.coundown/jquery.countdown.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;div class="countdown h2" data-end="2015/06/01">&lt;/div>
+
+&lt;script type="text/javascript">
+  $(".countdown").each(function() {
+      $(this).countdown($(this).attr('data-end'), function(event) {
+          $(this).html(
+              event.strftime([
+                  '&lt;div class="row">',
+                      '&lt;div class="col-xs-6 col-sm-3">',
+                          '&lt;span>Days&lt;/span>',
+                          '&lt;span>&lt;span>%D&lt;/span>&lt;/span>',
+                      '&lt;/div>',
+                      '&lt;div class="col-xs-6 col-sm-3">',
+                          '&lt;span>Hours&lt;/span>',
+                          '&lt;span>&lt;span>%H&lt;/span>&lt;/span>',
+                      '&lt;/div>',
+                      '&lt;div class="col-xs-6 col-sm-3">',
+                          '&lt;span>Minutes&lt;/span>',
+                          '&lt;span>&lt;span>%M&lt;/span>&lt;/span>',
+                      '&lt;/div>',
+                      '&lt;div class="col-xs-6 col-sm-3">',
+                          '&lt;span>Seconds&lt;/span>',
+                          '&lt;span>&lt;span>%S&lt;/span>&lt;/span>',
+                      '&lt;/div>',
+                  '&lt;/div>'
+              ].join(''))
+          );
+      });
+  })
+&lt;/script></pre>
+                  </div>
+                  <!-- /jQuery Countdown -->
+
+                  <!-- Magnific Popup -->
+                  <div data-plugin="magnific">
+                    <h4>Magnific Popup</h4>
+                    A simple and html agnostic date countdown plugin for jQuery
+                    <br><br>
+                    Plugin Page: <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+&lt;link rel="stylesheet" type="text/css" href="../assets/plugins/magnific-popup/magnific-popup.css" /></pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/magnific-popup/jquery.magnific-popup.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;!-- Image Popup -->
+&lt;a href="assets/images/game-kingdoms-of-amalur-reckoning-1440x900.jpg" class="angled-img image-popup">
+  &lt;div class="img">
+    &lt;img src="assets/images/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
+  &lt;/div>
+  &lt;i class="fa fa-search-plus icon">&lt;/i>
+&lt;/a>
+&lt;!-- Image Popup -->
+
+&lt;!-- Video Popup -->
+&lt;a href="http://www.youtube.com/watch?v=1nKW9kTjsps" class="angled-img pull-left video-popup">
+  &lt;div class="img">
+    &lt;img src="assets/images/game-bloodborne-500x375.jpg" alt="">
+  &lt;/div>
+  &lt;i class="fa fa-play icon">&lt;/i>
+&lt;/a>
+&lt;!-- /Video Popup -->
+
+&lt;!-- Gallery Popup -->
+&lt;div class="gallery-popup">
+  &lt;a href="assets/images/game-kingdoms-of-amalur-reckoning-2-1940x1185.jpg" class="angled-img pull-left">
+    &lt;div class="img">
+      &lt;img src="assets/images/game-kingdoms-of-amalur-reckoning-2-500x375.jpg" alt="">
+    &lt;/div>
+    &lt;i class="fa fa-search-plus icon">&lt;/i>
+  &lt;/a>
+  &lt;a href="assets/images/game-kingdoms-of-amalur-reckoning-3-1920x1080.jpg" class="angled-img pull-left">
+    &lt;div class="img">
+      &lt;img src="assets/images/game-kingdoms-of-amalur-reckoning-3-500x375.jpg" alt="">
+    &lt;/div>
+    &lt;i class="fa fa-search-plus icon">&lt;/i>
+  &lt;/a>
+&lt;/div>
+&lt;!-- /Gallery Popup --></pre>
+                  </div>
+                  <!-- /Magnific Popup -->
+
+                  <!-- Revolution Slider -->
+                  <div data-plugin="revslider">
+                    <h4>Revolution Slider</h4>
+                    Slider Revolution is an all-purpose slide displaying solution that allows for showing almost any kind of content with highly customizable, transitions, effects and custom animations.
+                    <br><br>
+                    Plugin Page: <a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+&lt;link rel="stylesheet" type="text/css" href="../assets/plugins/slider-revolution/examples&amp;source/rs-plugin/css/settings.css" /></pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/slider-revolution/examples&amp;source/rs-plugin/js/jquery.themepunch.tools.min.js">&lt;/script>
+&lt;script type="text/javascript" src="../assets/plugins/slider-revolution/examples&amp;source/rs-plugin/js/jquery.themepunch.revolution.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;!-- Slider Revolution-->
+&lt;!--
+    Use classes:
+    rs-fullscreen
+-->
+&lt;div class="tp-banner-container rs-youplay">
+  &lt;div class="tp-banner">
+    &lt;ul>
+      &lt;!-- SLIDE NR. 1  -->
+      &lt;li data-thumb="assets/images/game-dark-souls-ii-500x375.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+        &lt;!-- MAIN IMAGE -->
+        &lt;img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/game-dark-souls-ii-1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+        &lt;!-- LAYERS -->
+
+        &lt;!-- LAYER NR. 1 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="-60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;h2 class="h1">Dark Souls II&lt;/h2>
+        &lt;/div>
+
+        &lt;!-- LAYER NR. 2 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;a class="btn btn-lg" href="#!">$39.99&lt;/a>
+        &lt;/div>
+      &lt;/li>
+
+      &lt;!-- SLIDE NR. 2  -->
+      &lt;li data-thumb="assets/images/game-dark-souls-ii-2-500x375.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+        &lt;!-- MAIN IMAGE -->
+        &lt;img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/game-dark-souls-ii-2-1920x1248.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+        &lt;!-- LAYERS -->
+
+        &lt;!-- LAYER NR. 1 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="-60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;h2 class="h1">Dark Souls II&lt;/h2>
+        &lt;/div>
+
+        &lt;!-- LAYER NR. 2 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;a class="btn btn-lg" href="#!">$39.99&lt;/a>
+        &lt;/div>
+      &lt;/li>
+
+      &lt;!-- SLIDE NR. 3  -->
+      &lt;li data-thumb="assets/images/game-dark-souls-ii-3-500x375.jpg" data-saveperformance="on" data-transition="random-static" data-slotamount="7" data-masterspeed="700">
+        &lt;!-- MAIN IMAGE -->
+        &lt;img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/game-dark-souls-ii-3-1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+        &lt;!-- LAYERS -->
+
+        &lt;!-- LAYER NR. 1 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="-60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;h2 class="h1">Dark Souls II&lt;/h2>
+        &lt;/div>
+
+        &lt;!-- LAYER NR. 2 -->
+        &lt;div class="tp-caption customin customout" href="#!" data-x="left" data-hoffset="60" data-y="center" data-voffset="60" data-customin="x:0;" data-customout="x:0;" data-start="0" data-speed="500" data-endspeed="500">
+          &lt;a class="btn btn-lg" href="#!">$39.99&lt;/a>
+        &lt;/div>
+      &lt;/li>
+    &lt;/ul>
+    &lt;div class="tp-bannertimer">&lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;!-- /Slider Revolution--></pre>
+                  </div>
+                  <!-- /Revolution Slider -->
+
+                  <!-- Isotope -->
+                  <div data-plugin="isotope">
+                    <h4>Isotope</h4>
+                    Filter &amp; sort magical layouts
+                    <br><br>
+                    Plugin Page: <a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+No CSS</pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/isotope/isotope.pkgd.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;div class="isotope">
+  &lt;!-- Sort Categories -->
+  &lt;ul class="pagination isotope-options">
+    &lt;li data-filter="all" class="active">&lt;span>All&lt;/span>
+    &lt;/li>
+    &lt;li data-filter="free">&lt;span>Free&lt;/span>
+    &lt;/li>
+    &lt;li data-filter="popular">&lt;span>Popular&lt;/span>
+    &lt;/li>
+    &lt;li data-filter="specials">&lt;span>Specials&lt;/span>
+    &lt;/li>
+  &lt;/ul>
+  &lt;!-- /Sort Categories -->
+
+  &lt;div class="isotope-list row">
+
+    &lt;!-- Single Product Block -->
+    &lt;div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular">
+      &lt;a href="#!" class="angled-img">
+        &lt;div class="img img-offset">
+          &lt;img src="assets/images/game-bloodborne-500x375.jpg" alt="">
+        &lt;/div>
+        &lt;div class="bottom-info">
+          &lt;h4>Bloodborne&lt;/h4>
+          &lt;div class="row">
+            &lt;div class="col-xs-6">
+              &lt;div class="rating">
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-xs-6">
+              &lt;div class="price">
+                $50.00
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/a>
+    &lt;/div>
+    &lt;!-- /Single Product Block -->
+
+    &lt;!-- Single Product Block -->
+    &lt;div class="item col-lg-4 col-md-6 col-xs-12" data-filters="popular,specials">
+      &lt;a href="#!" class="angled-img">
+        &lt;div class="img img-offset">
+          &lt;img src="assets/images/game-dark-souls-ii-500x375.jpg" alt="">
+          &lt;div class="badge show-half bg-default">-20%&lt;/div>
+        &lt;/div>
+        &lt;div class="bottom-info">
+          &lt;h4>Dark Souls II&lt;/h4>
+          &lt;div class="row">
+            &lt;div class="col-xs-6">
+              &lt;div class="rating">
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star-half-o">&lt;/i>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-xs-6">
+              &lt;div class="price">
+                $39.99 &lt;sup>&lt;del>$49.99&lt;/del>&lt;/sup>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/a>
+    &lt;/div>
+    &lt;!-- /Single Product Block -->
+
+    &lt;!-- Single Product Block -->
+    &lt;div class="item col-lg-4 col-md-6 col-xs-12" data-filters="Free">
+      &lt;a href="#!" class="angled-img">
+        &lt;div class="img img-offset">
+          &lt;img src="assets/images/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
+        &lt;/div>
+        &lt;div class="bottom-info">
+          &lt;h4>Kingdoms of Amalur&lt;/h4>
+          &lt;div class="row">
+            &lt;div class="col-xs-6">
+              &lt;div class="rating">
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+                &lt;i class="fa fa-star">&lt;/i>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="col-xs-6">
+              &lt;div class="price">
+                $20.00
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/a>
+    &lt;/div>
+    &lt;!-- /Single Product Block -->
+  &lt;/div>
+&lt;/div></pre>
+                  </div>
+                  <!-- /Isotope -->
+
+                  <!-- Skrollr -->
+                  <div data-plugin="skrollr">
+                    <h4>Skrollr</h4>
+                    Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop. No jQuery. Just plain JavaScript (and some love).
+                    <br><br>
+                    Plugin Page: <a href="https://github.com/Prinzhorn/skrollr">https://github.com/Prinzhorn/skrollr</a>
+                    <br><br>
+                    
+                    CSS Files:
+                    <pre class="prettyprint linenums">
+No CSS</pre>
+
+                    JavaScript Files:
+                    <pre class="prettyprint linenums">
+&lt;script type="text/javascript" src="../assets/plugins/skrollr/skrollr.min.js">&lt;/script></pre>
+
+                    Usage Example:
+                    <pre class="prettyprint linenums">
+&lt;!-- Banner -->
+&lt;div class="youplay-banner banner-top xsmall">
+  &lt;div class="image" style="background-image: url(assets/images/banner-blog-bg.jpg)" data-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;">
+  &lt;/div>
+
+  &lt;div class="info" data-top="opacity: 1; transform: translate3d(0px,0px,0px);" data-top-bottom="opacity: 0; transform: translate3d(0px,150px,0px);" data-anchor-target=".youplay-banner.banner-top">
+    &lt;div>
+      &lt;div class="container">
+        &lt;h2>Bloodborne - First Try!&lt;/h2>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+&lt;!-- /Banner --></pre>
+                  </div>
+                  <!-- /Skrollr -->
+                  
+                </div>
+
+              </div>
+
+
+              <div class="well">
+                <h2>Credits</h2>
+
+                <h3>Plugins</h3>
+                <ul>
+                  <li><strong>Bootstrap</strong> – <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+                  <li><strong>jQuery</strong> – <a href="http://jquery.com/">http://jquery.com/</a></li>
+                  <li><strong>FontAwesome</strong> – <a href="http://fortawesome.github.io/Font-Awesome/ ">http://fortawesome.github.io/Font-Awesome/ </a></li>
+                  <li><strong>Owl Carousel 2</strong> – <a href="http://www.owlcarousel.owlgraphic.com/">http://www.owlcarousel.owlgraphic.com/</a></li>
+                  <li><strong>jQuery Countdown</strong> – <a href="http://hilios.github.io/jQuery.countdown/">http://hilios.github.io/jQuery.countdown/</a></li>
+                  <li><strong>Magnific Popup</strong> – <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></li>
+                  <li><strong>Slider Revolution</strong> – <a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848</a></li>
+                  <li><strong>Isotope</strong> – <a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+                  <li><strong>Skrollr</strong> – <a href="https://github.com/Prinzhorn/skrollr">https://github.com/Prinzhorn/skrollr</a></li>
+                  <li><strong>html5shiv</strong> – <a href="https://github.com/aFarkas/html5shiv">https://github.com/aFarkas/html5shiv</a></li>
+                  <li><strong>SmoothScroll</strong> – <a href="https://gist.github.com/galambalazs/6477177">https://gist.github.com/galambalazs/6477177</a></li>
+                </ul>
+
+                <h3>Images</h3>
+                <div class="alert">THIS IMAGES NOT INCLUDED IN THEME PACKAGE! <br>Uses only in demo pages.</div>
+                <ul>
+                  <li><strong>User photos</strong> – <a href="http://pixabay.com/">http://pixabay.com/</a></li>
+                  <li><strong>Dark theme. Thanks for artwork</strong>:
+                    <ul>
+                      <li><a href="http://m-hugo.deviantart.com/">m-hugo</a></li>
+                      <li><a href="http://chaoyuanxu.deviantart.com/">ChaoyuanXu</a></li>
+                      <li><a href="http://arixev.deviantart.com/">Arixev</a></li>
+                      <li><a href="http://tamplierpainter.deviantart.com/">TamplierPainter</a></li>
+                      <li><a href="http://tobylewin.deviantart.com/">tobylewin</a></li>
+                      <li><a href="http://sandara.deviantart.com/">sandara</a></li>
+                      <li><a href="https://www.flickr.com/photos/bagogames/">BadoGames</a></li>
+                      <li><a href="https://www.flickr.com/photos/107517226@N07/">Videogame Photography</a></li>
+                    </ul>
+                  </li>
+                  <li><strong>Light theme. Thanks for artwork:</strong>:
+                    <ul>
+                      <li><a href="http://v-nom.deviantart.com/">V-nom</a></li>
+                      <li><a href="http://sawuinhaff.deviantart.com/">Sawuinhaff</a></li>
+                      <li><a href="http://jcbarquet.deviantart.com/">jcbarquet</a></li>
+                      <li><a href="http://sandara.deviantart.com/">sandara</a></li>
+                      <li><a href="http://jjpeabody.deviantart.com/">jjpeabody</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div>
+
+
+
+              <div class="well">
+                <h2>End of Documentation</h2>
+                Thanks for purchasing <strong>Youplay</strong>. We hope you will enjoy using it for your next project.
+              </div>
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/jquery-1.8.3.min.js"></script>
+    <script src="assets/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="assets/bootstrap.js"></script>
+    <script src="assets/jquery.tocify.min.js"></script>
+    <script src="assets/prettify.js"></script>
+    <script>
+        $(function() {
+
+            var toc = $("#toc").tocify({
+              selectors: "h2,h3"
+            }).data("toc-tocify");
+
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
+
+        });
+
+
+        // plugins selector
+        $(function() {
+          var select = $('select[name=plugins]');
+          var descriptions = $('.plugins-description');
+
+          select.on('change', function() {
+            descriptions.find('.active').removeClass('active');
+            descriptions.find('[data-plugin=' + this.value + ']').addClass('active');
+          });
+        });
+    </script>
+
+  </body>
+</html>

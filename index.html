@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+  Name: Youplay - Game Template based on Bootstrap
+  Version: 1.0.0
+  Author: nK
+  Website: http://nkdev.info
+  Support: http://nk.ticksy.com
+  Purchase: http://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=nKdev
+  License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+  Copyright 2015.
+-->
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GameWinkel</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Icon -->
+  <link rel="icon" type="image/png" href="dark/assets/images/icon.png">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+  <!-- youplay -->
+
+  <link rel="stylesheet" type="text/css" href="assets/youplay/css/youplay-demo.css" />
+  <!--[if lt IE 9]>
+      <script src="../assets/plugins/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <!-- Main Content -->
+  <div class="content-wrap">
+    <a href="dark/index.php" class="dark-side">
+      <div>
+        <div class="image" style="background-image: url(dark/assets/images/banner-bg.jpg)"></div>
+        <img src="assets/images/logo-light.png" alt="" class="logo">
+        <img src="assets/images/whose-side-light.png" alt="" class="descr">
+      </div>
+    </a>
+
+    <a href="light/index.php" class="light-side">
+      <div>
+        <div class="image" style="background-image: url(light/assets/images/banner-bg.jpg)"></div>
+        <img src="assets/images/logo-dark.png" alt="" class="logo">
+        <img src="assets/images/whose-side-dark.png" alt="" class="descr">
+      </div>
+    </a>
+
+    <span class="dark-side-name">Dark Side</span>
+    <span class="light-side-name">Light Side</span>
+  </div>
+  <!-- /Main Content -->
+
+  <!-- init youplay -->
+  <script>
+    if(typeof youplay !== 'undefined') {
+        youplay.init({
+            smoothscroll: false,
+        });
+    }
+  </script>
+
+</body>
+
+</html>

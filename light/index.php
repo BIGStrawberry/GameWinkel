@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--
+  Name: Youplay - Game Template based on Bootstrap
+  Version: 1.0.0
+  Author: nK
+  Website: http://nkdev.info
+  Support: http://nk.ticksy.com
+  Purchase: http://themeforest.net/item/youplay-game-template-based-on-bootstrap/11306207?ref=nKdev
+  License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+  Copyright 2015.
+-->
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>youplay</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Icon -->
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/fontawesome/css/font-awesome.min.css" />
+
+  <!-- Owl Catousel -->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/owl.carousel/owl.carousel.css" />
+  <!-- youplay -->
+
+  <link rel="stylesheet" type="text/css" href="../assets/youplay/css/youplay-light.min.css" />
+  <!--[if lt IE 9]>
+      <script src="../assets/plugins/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="page-preloader preloader-wrapp">
+    <img src="assets/images/logo.png" alt="">
+    <div class="preloader"></div>
+  </div>
+  <!-- /Preloader -->
+
+  <!-- Navbar -->
+  	<?php include '../includes/navbar.php';?>
+  <!-- /Navbar -->
+
+  <!-- Main Content -->
+  <section class="content-wrap">
+
+    <!-- Banner -->
+    <section class="youplay-banner banner-top">
+      <div class="image" style="background-image: url(assets/images/banner-bg.jpg)" data-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;">
+      </div>
+
+      <div class="info" data-top="opacity: 1; transform: translate3d(0px,0px,0px);" data-top-bottom="opacity: 0; transform: translate3d(0px,150px,0px);" data-anchor-target=".youplay-banner.banner-top">
+        <div>
+          <div class="container">
+            <h2>Journey</h2>
+            <em>"Featuring stunning visuals, a Grammy-nominated musical score, and innovative online cooperative gameplay,<br>Journey™ delivers an innovative interactive game experience like no other."</em>
+            <br>
+            <br>
+            <br>
+            <a class="btn btn-lg" href="#!">Purchase</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Banner -->
+
+    <!-- Images With Text -->
+    <div class="youplay-carousel">
+      <a class="angled-img" href="store-product-1.html">
+        <div class="img">
+          <img src="assets/images/game-road-no-taken-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Road Not Taken</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-botanicula-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Botanicula</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-flower-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Flower</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-no-mans-sky-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>No Man's Sky</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-proteus-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Proteus</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-brothers-a-tale-of-two-sons-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Brothers: A Tale of Two Sons</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- /Images With Text -->
+
+
+
+    <!-- Popular -->
+    <h2 class="container h1">Popular <a href="#!" class="btn pull-right">See More</a></h2>
+    <div class="youplay-carousel">
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-machinarium-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Machinarium</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-broken-age-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Broken Age</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-dream-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>Dream</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img">
+          <img src="assets/images/game-world-of-goo-500x375.jpg" alt="">
+        </div>
+        <div class="over-info">
+          <div>
+            <div>
+              <h4>World of Goo</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- /Popular -->
+
+
+    <!-- Specials -->
+    <h2 class="container h1">Specials <a href="#!" class="btn pull-right">See More</a></h2>
+    <div class="youplay-carousel">
+      <a class="angled-img" href="#!">
+        <div class="img img-offset">
+          <img src="assets/images/game-botanicula-500x375.jpg" alt="">
+          <div class="badge bg-default">
+            -20%
+          </div>
+        </div>
+        <div class="bottom-info">
+          <h4>Botanicula</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="price">$39.99 <sup><del>$49.99</del></sup>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img img-offset">
+          <img src="assets/images/game-flower-500x375.jpg" alt="">
+          <div class="badge bg-default">
+            -25%
+          </div>
+        </div>
+        <div class="bottom-info">
+          <h4>Flower</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="price">$26.25 <sup><del>$35.00</del></sup>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img img-offset">
+          <img src="assets/images/game-dream-500x375.jpg" alt="">
+          <div class="badge bg-default">
+            -30%
+          </div>
+        </div>
+        <div class="bottom-info">
+          <h4>Dream</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="price">$34.99 <sup><del>$49.99</del></sup>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="angled-img" href="#!">
+        <div class="img img-offset">
+          <img src="assets/images/game-brothers-a-tale-of-two-sons-500x375.jpg" alt="">
+          <div class="badge bg-success">
+            -100%
+          </div>
+        </div>
+        <div class="bottom-info">
+          <h4>Brothers: A Tale of Two Sons</h4>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="price"><span class="text-success">FREE!</span>  <sup><del>$29.99</del></sup>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- /Specials -->
+
+
+    <!-- Preorder -->
+    <div class="h2"></div>
+    <section class="youplay-banner small">
+      <div class="image" style="background-image: url(assets/images/banner-broken-age.jpg); background-size: cover;" data-top-bottom="background-position: 50% -150px;" data-bottom-top="background-position: 50% 150px;">
+      </div>
+
+      <div class="info container align-center">
+        <div>
+          <h2>Broken Age</h2>
+
+          <!-- See countdown init in bottom of the page -->
+          <div class="countdown h2" data-end="2016/01/01"></div>
+
+          <br>
+          <br>
+          <a class="btn btn-lg" href="#!">Pre-Order</a>
+        </div>
+      </div>
+    </section>
+    <!-- /Preorder -->
+
+
+    <!-- Latest News -->
+    <h2 class="container h1">Latest News</h2>
+    <section class="youplay-news container">
+      <!-- Single News Block -->
+      <div class="news-one row">
+        <div class="col-md-4">
+          <a href="blog-post-1.html" class="angled-img">
+            <div class="img">
+              <img src="assets/images/game-road-no-taken-500x375.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="clearfix">
+            <h3 class="h2 pull-left m-0"><a href="blog-post-1.html">Road Not Taken - First Try!</a></h3>
+            <span class="date pull-right"><i class="fa fa-calendar"></i> Today</span>
+          </div>
+          <div class="tags">
+            <i class="fa fa-tags"></i> Road Not Taken, first try, newbie game
+          </div>
+          <div class="description">
+            <p>
+              Ut sibi fuerat socius sagittis. Ego intervenerit. Vere quia a te nuper iratus occidit illos undecim annorum puer. Deinde, si hoc forte qui fuit imperavit.
+            </p>
+            <p>
+              Quod satis pecuniae sempiternum. Ut sciat oportet motum. Nunquam invenies eum. Hic de tabula. Lorem ipsum occurrebat pragmaticam semper ut, si quis ita velim tibi bene recognoscere.
+            </p>
+          </div>
+          <a href="blog-post-1.html" class="btn read-more pull-left">Read More</a>
+        </div>
+      </div>
+      <!-- /Single News Block -->
+
+      <!-- Single News Block -->
+      <div class="news-one row">
+        <div class="col-md-4">
+          <a href="blog-post-2.html" class="angled-img">
+            <div class="img">
+              <img src="assets/images/game-botanicula-500x375.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="clearfix">
+            <h3 class="h2 pull-left m-0"><a href="blog-post-2.html">Coming to Youplay - Botanicula</a></h3>
+            <span class="date pull-right"><i class="fa fa-calendar"></i> March 9, 2015</span>
+          </div>
+          <div class="tags">
+            <i class="fa fa-tags"></i> Botanicula, coming soon, first review, sale date
+          </div>
+          <div class="description">
+            Pergo coctione, et ego, et tu oblivisci Pinkman. Obliviscendum hoc unquam factum. Intelligamus hoc in sola SINGULTO multo aliter atque fructuosa negotium structura. Malo B. Option.
+          </div>
+          <a href="blog-post-2.html" class="btn read-more pull-left">Read More</a>
+        </div>
+      </div>
+      <!-- /Single News Block -->
+
+      <!-- Single News Block -->
+      <div class="news-one row">
+        <div class="col-md-4">
+          <a href="blog-post-3.html" class="angled-img">
+            <div class="img">
+              <img src="assets/images/game-journey-500x375.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="clearfix">
+            <h3 class="h2 pull-left m-0"><a href="blog-post-3.html">Review Journey</a></h3>
+            <span class="date pull-right"><i class="fa fa-calendar"></i> March 1, 2015</span>
+          </div>
+          <div class="tags">
+            <i class="fa fa-tags"></i> Journey, game, review
+          </div>
+          <div class="description">
+            Nonne vides quid sit? Tu es ... Jesse me respice. Tu ... blowfish sunt. A blowfish! Cogitare. Statura pusillus, nec sapientium panem, nec artificum. Sed predators facile prædam blowfish secretum telum non se habet. Non ille? Quid faciam blowfish, Isai.
+            Blowfish quid faciat? In blowfish inflat, purus?
+          </div>
+          <a href="blog-post-3.html" class="btn read-more">Read More</a>
+        </div>
+      </div>
+      <!-- /Single News Block -->
+    </section>
+    <!-- /Latest News -->
+
+
+    <!-- Features -->
+    <h2 class="container h1">Why Buy from Us</h2>
+    <section class="youplay-features container">
+      <div class="col-md-3 col-xs-12">
+        <div class="feature angled-bg">
+          <i class="fa fa-cc-visa"></i>
+          <h3>Payment</h3>
+          <small>More than 10 payment systems</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div class="feature angled-bg">
+          <i class="fa fa-gamepad"></i>
+          <h3>Games</h3>
+          <small>A large number of games</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div class="feature angled-bg">
+          <i class="fa fa-money"></i>
+          <h3>Cheap</h3>
+          <small>Lowest prices on the Internet</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div class="feature angled-bg">
+          <i class="fa fa-users"></i>
+          <h3>Community</h3>
+          <small>The largest gaming community</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+      <?php include '../includes/footer.php';?>
+    <!-- /Footer -->
+  </section>
+  <!-- /Main Content -->
+
+  <!-- Search Block -->
+  <div class="search-block">
+    <a href="#!" class="search-toggle glyphicon glyphicon-remove"></a>
+    <form action="search.html">
+      <div class="youplay-input">
+        <input type="text" name="search" placeholder="Search...">
+      </div>
+    </form>
+  </div>
+  <!-- /Search Block -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="../assets/plugins/jquery/jquery.min.js"></script>
+
+  <!-- CSS Shapes Polyfill -->
+  <script type="text/javascript" src="../assets/plugins/css-shapes-polyfill/shapes-polyfill.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Skrollr -->
+  <script type="text/javascript" src="../assets/plugins/skrollr/skrollr.min.js"></script>
+
+  <!-- Smooth Scroll -->
+  <script type="text/javascript" src="../assets/plugins/smoothscroll/smoothscroll.js"></script>
+
+  <!-- Owl Carousel -->
+  <script type="text/javascript" src="../assets/plugins/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Countdown -->
+  <script type="text/javascript" src="../assets/plugins/jquery.coundown/jquery.countdown.min.js"></script>
+
+  <!-- youplay -->
+  <script type="text/javascript" src="../assets/youplay/js/youplay.min.js"></script>
+  <!-- init youplay -->
+  <script>
+    if(typeof youplay !== 'undefined') {
+        youplay.init({
+            smoothscroll: false,
+        });
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(".countdown").each(function() {
+        $(this).countdown($(this).attr('data-end'), function(event) {
+          $(this).text(
+            event.strftime('%D days %H:%M:%S')
+          );
+        });
+    })
+  </script>
+
+</body>
+
+</html>
