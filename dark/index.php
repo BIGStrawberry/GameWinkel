@@ -47,7 +47,7 @@
             <br>
             <br>
             <br>
-            <a class="btn btn-lg" href="http://localhost/GameWinkel/dark/product-page.php?id=1">Purchase</a>
+            <a class="btn btn-lg" href="http://192.81.220.227/GameWinkel/dark/product-page.php?id=1">Purchase</a>
           </div>
         </div>
       </div>

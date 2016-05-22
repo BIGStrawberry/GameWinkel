@@ -18,10 +18,11 @@
     	$productDescription = $_GET['product_description']; 
     	$productPlatform = $_GET['product_platform'];
     	$releaseDate = $_GET['release_date'];
+	echo $sql;
 
-    	$sql = "INSERT INTO `gamewinkel`.`product` (`id`, `name`, `description`, `price`, `platform`, `releaseDate`, `video`) 
+    	$sql = "INSERT INTO `gamewinkel2`.`product` (`id`, `name`, `description`, `price`, `platform`, `releaseDate`, `video`) 
     			VALUES (NULL, '$productName', '$productDescription', '$productPrice', '$productPlatform', $releaseDate, '$productVideo');";
-       $result = $db_conn->query($sql);
+if (       $result = $db_conn->query($sql)) { echo "succes"; } else { echo "failure" . $sql; }
     ?>
 
 

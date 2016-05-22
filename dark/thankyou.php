@@ -13,7 +13,7 @@
         $productId = $_COOKIE['productbought'];
           
 
-        $sql = "INSERT INTO `gamewinkel`.`order` (`id`, `customerId`, `productId`, `status`, `date`, `firstname`, `lastname`, `email`, `info`) 
+        $sql = "INSERT INTO `gamewinkel2`.`order` (`id`, `customerId`, `productId`, `status`, `date`, `firstname`, `lastname`, `email`, `info`) 
               VALUES               (NULL, '1', '$productId', '1', '$date', '$firstName', '$lastName', '$email', '$info');";
 
           $result = $db_conn->query($sql);
